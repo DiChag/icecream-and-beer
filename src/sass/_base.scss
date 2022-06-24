@@ -1,0 +1,18 @@
+:root {
+  --red-text: #d41443;
+  --pink-text: #ffa5ba;
+  --black-text: #000000;
+  --white-text: #ffffff;
+
+  --color-focus: #ecebeb;
+
+  --primary-backgrounds: #ffffff;
+  --secondary-backgrounds: #fff5f6;
+  --menu-backgrounds: #e17992;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: var(--black-text);
+}
