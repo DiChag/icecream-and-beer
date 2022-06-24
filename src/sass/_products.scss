@@ -1,0 +1,38 @@
+.products__heading {
+    margin-bottom: 70px;
+}
+
+.products__ellipsis {
+    position: absolute;
+    width: 26px;
+    top: 218px;
+    left: 127px;
+
+}
+
+.products__block {
+    position: relative;
+    text-align: center;
+    padding: 160px 40px 40px;
+    margin-top: 140px;
+    width: 280px;
+    border-radius: 24px;
+}
+
+.products__cream {
+    background-color: #FFB8CA;
+}
+
+.products__coffee {
+    background-color: #F0D1A5;
+}
+
+.products__milkshakes {
+    background-color: #C2E297;
+}
+
+.products__image {
+    position: absolute;
+    top: -138px;
+    left: 0px;
+}
