@@ -112,6 +112,21 @@ body {
   background-position: center;
 }
 
+.products {
+  padding: 60px 0;
+}
+.products__subtitle, .products__title, .products__heading {
+  font-family: "Titan One";
+}
+
+.products__subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .products__heading {
   margin-bottom: 70px;
 }
