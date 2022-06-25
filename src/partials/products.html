@@ -2,96 +2,62 @@
   <div class="container products-container">
     <p class="products__subtitle">100% natural</p>
     <h2 class="products__title">products</h2>
-
-    <div class="products__block products__cream">
-      <img
-        class="products__image"
-        srcset="
-          ./images/products/ice-cream.png    280w,
-          ./images/products/ice-cream-2x.png 560w
-        "
-        src="./images/products/ice-cream.png"
-        alt="людина"
-        sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (max-width: 767px) 280px, 100vw"
-        loading="lazy"
-      />
-      <h3 class="heading products__heading">ice cream</h3>
-      <img
-        class="products__ellipsis"
-        srcset="
-          ./images/products/ellipsis.png    26w,
-          ./images/products/ellipsis@2x.png 52w
-        "
-        src="./images/products/ellipsis.png"
-        alt="людина"
-        sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (max-width: 767px) 26px, 100vw"
-        loading="lazy"
-      />
-      <p class="text products__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et. dolore magna aliqua facilisis.
-      </p>
-    </div>
-    <div class="products__block products__coffee">
-      <img
-        class="products__image"
-        srcset="
-          ./images/products/ice-coffee.png    280w,
-          ./images/products/ice-coffee-2x.png 560w
-        "
-        src="./images/products/ice-coffee.png"
-        alt="людина"
-        sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (max-width: 767px) 280px, 100vw"
-        loading="lazy"
-      />
-      <h3 class="heading products__heading">ice coffee</h3>
-      <img
-        class="products__ellipsis"
-        srcset="
-          ./images/products/ellipsis.png    26w,
-          ./images/products/ellipsis@2x.png 52w
-        "
-        src="./images/products/ellipsis.png"
-        alt="людина"
-        sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (max-width: 767px) 26px, 100vw"
-        loading="lazy"
-      />
-      <p class="text products__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et. dolore magna aliqua facilisis.
-      </p>
-    </div>
-    <div class="products__block products__milkshakes">
-      <div>
-        <img
-          class="products__image"
-          srcset="
-            ./images/products/milkshakes.png    280w,
-            ./images/products/milkshakes-2x.png 560w
-          "
-          src="./images/products/milkshakes.png"
-          alt="людина"
-          sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (max-width: 767px) 280px, 100vw"
-          loading="lazy"
-        />
+    <div class="products__grid">
+      <div class="products__block products__cream">
+        <h3 class="products__heading products__heading--cream">ice cream</h3>
+        <p class="products__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.
+        </p>
+        <button class="products__button" type="button">
+          <svg
+            class="products__svg"
+            width="15px"
+            height="17px"
+            aria-label="arrow to the right"
+          >
+            <use href="/src/images/Product.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
       </div>
 
-      <h3 class="heading products__heading">milkshakes</h3>
-      <img
-        class="products__ellipsis"
-        srcset="
-          ./images/products/ellipsis.png    26w,
-          ./images/products/ellipsis@2x.png 52w
-        "
-        src="./images/products/ellipsis.png"
-        alt="людина"
-        sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (max-width: 767px) 26px, 100vw"
-        loading="lazy"
-      />
-      <p class="text products__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et. dolore magna aliqua facilisis.
-      </p>
+      <div class="products__block products__coffee">
+        <h3 class="products__heading products__heading--coffee">ice coffee</h3>
+        <p class="products__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.
+        </p>
+        <button class="products__button" type="button">
+          <svg
+            class="products__svg"
+            width="15px"
+            height="17px"
+            aria-label="arrow to the right"
+          >
+            <use href="/src/images/Product.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="products__block products__milkshakes">
+        <h3 class="products__heading products__heading--milkshakes">
+          milkshakes
+        </h3>
+        <p class="products__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.
+        </p>
+        <button class="products__button" type="button">
+          <svg
+            class="products__svg"
+            width="15px"
+            height="17px"
+            aria-label="arrow to the right"
+          >
+            <use href="/src/images/Product.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </section>

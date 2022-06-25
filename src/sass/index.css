@@ -1,0 +1,152 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 320px) {
+  .container {
+    width: 320px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+:root {
+  --red-text: #d41443;
+  --pink-text: #ffa5ba;
+  --black-text: #000000;
+  --white-text: #ffffff;
+  --color-focus: #ecebeb;
+  --primary-backgrounds: #ffffff;
+  --secondary-backgrounds: #fff5f6;
+  --menu-backgrounds: #e17992;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  color: var(--black-text);
+}
+
+.example {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #2f2f37;
+  max-width: 960px;
+  padding: 16px;
+}
+
+.example code {
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #ff6b0a;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.example .background {
+  height: 240px;
+  background-image: url("../images/logo.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.products {
+  padding: 60px 0;
+}
+.products__subtitle, .products__title, .products__heading {
+  font-family: "Titan One";
+}
+
+.products__subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.products__heading {
+  margin-bottom: 70px;
+}
+
+.products__block {
+  text-align: center;
+  padding: 160px 40px 40px;
+  margin-top: 140px;
+  width: 280px;
+  border-radius: 24px;
+}
+
+.products__cream {
+  background-color: #FFB8CA;
+}
+
+.products__coffee {
+  background-color: #F0D1A5;
+}
+
+.products__milkshakes {
+  background-color: #C2E297;
+}/*# sourceMappingURL=index.css.map */
