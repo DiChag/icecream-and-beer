@@ -131,7 +131,15 @@ body {
   margin-bottom: 70px;
 }
 
+.products__ellipsis {
+  position: absolute;
+  width: 26px;
+  top: 218px;
+  left: 127px;
+}
+
 .products__block {
+  position: relative;
   text-align: center;
   padding: 160px 40px 40px;
   margin-top: 140px;
@@ -149,4 +157,64 @@ body {
 
 .products__milkshakes {
   background-color: #C2E297;
+}
+
+.products__image {
+  position: absolute;
+  top: -138px;
+  left: 0px;
+}
+
+.contact {
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255) 24%, rgb(255, 245, 246) 24%);
+}
+
+.card {
+  min-width: 280px;
+  padding: 40px 32px;
+  /* border: 1px solid red; */
+  border-radius: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0px 8px 30px 0px rgba(212, 20, 67, 0.1);
+  background: rgb(255, 255, 255);
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.contact__name {
+  padding: 4px 24px;
+  min-width: 80px;
+  height: 16px;
+  background-color: rgb(240, 209, 165);
+  color: #fff;
+  text-transform: uppercase;
+  border-color: transparent;
+  border-radius: 24px;
+  font-size: 12px;
+  line-height: 1.83;
+}
+
+.contact__name--secondary-bg {
+  background: rgb(194, 226, 151);
+}
+
+.card__item {
+  border-bottom: 1px solid rgb(225, 225, 225);
+  padding-bottom: 24px;
+  padding-top: 24px;
+}
+
+.card__item:last-child {
+  border: none;
+  padding-bottom: 0;
+}
+
+.card__item:nth-child(1) {
+  padding-top: 20px;
+}
+
+.card__thumb {
+  margin-bottom: 8px;
 }/*# sourceMappingURL=index.css.map */
