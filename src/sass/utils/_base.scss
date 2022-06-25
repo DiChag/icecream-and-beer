@@ -3,12 +3,20 @@
   --pink-text: #ffa5ba;
   --black-text: #000000;
   --white-text: #ffffff;
+//   Цвет текста в контактах
+  --contact-text: rgba(144, 126, 130, 1);
+
 
   --color-focus: #ecebeb;
+//   Ховер и фокус на розовую кнопку
+  --color-focus-btn:rgba(247, 17, 113,1);
 
   --primary-backgrounds: #ffffff;
   --secondary-backgrounds: #fff5f6;
   --menu-backgrounds: #e17992;
+  --socials-background: #FEA5BB;
+//   Фон для красных кнопок
+  --button--bg: #d41443;
 }
 
 body {
