@@ -17,7 +17,7 @@
     position: relative;
     height: 502px;
     
-    @include mq(tablet-only) {
+    @include mq(tablet) {
            padding-top: 32px;
            height: 416px;
         }
@@ -74,7 +74,7 @@
     display: none;
 }
 
-
+// Кнопка "By-now' в ХЕДЕРЕ (таблетка + десктоп)
 
 .header__menu-btn {
     display: block;
@@ -94,9 +94,21 @@
         display: none;
     }
 
-    @include mq(tablet) { 
+    @include mq(tablet-only) { 
     margin-left: 32px;
     }
+
+
+    &::after {
+        content: '';
+        background-image: url(../images/header-hero/mob-tab_menu/arrow_mob-tab-menu.svg);
+        background-repeat: no-repeat;
+         width: 6px;
+         height: 10px;
+        display: inline-flex;
+        margin-left: 12px;
+    }
+        
 }
 
 
@@ -219,14 +231,32 @@
     position: absolute;
     top: 83px;
     right: 0px;
-}
+
+    @include mq(tablet) {
+        top: 43px;
+        right: 185px;
+    }
+
+        @include mq(desctop) {
+            top: 54px;
+            right: 149px;
+        }
+ }
 
 .hero__main-cover {
-    min-width: 171px;
-    height: 410px;
     position: absolute;
     bottom: 0;
     right: 32px;
+     
+    @include mq(tablet) {
+        bottom: 0;
+         right: 303px;
+    }
+
+        @include mq(desctop) {
+         bottom: 0;
+         right: 328px;
+        }
 }
 
 .hero__title {
@@ -235,13 +265,14 @@
     top: 194px;
     left: 20px;
     display: block;
+    width: 218px;
+
     font-family: 'Titan One';
     font-weight: 400;
     font-size: 26px;
     line-height: 1.15;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    
     color: #FFFFFF;
 
     @include mq(tablet) {
@@ -253,14 +284,14 @@
         line-height: 1.14;
     }
 
-        @include mq(desctop) {
-            position: absolute;
-            top: 147px;
-            left: 16px;
-            min-width: 162px;
-            font-size: 38px;
-            line-height: 1.16;
-        }
+    @include mq(desctop) {
+        position: absolute;
+        top: 147px;
+        left: 16px;
+        font-size: 38px;
+        line-height: 1.16;
+        width: 277px;
+    }
 }
 
 .hero__title-accent {
@@ -277,9 +308,22 @@
             font-size: 58px;
             line-height: 1.12;
         }
+}
 
+.hero__button-wrap {
+    position: absolute;
+    top: 320px;
+    left: 20px;
 
+    @include mq(tablet) {
+            top: 202px;
+            left: 32px;
+        }
 
+         @include mq(desctop) {
+             top: 318px;
+             left: 16px;
+         }
 }
 
 .hero__button {
@@ -292,12 +336,13 @@
     line-height: 1.25;
     text-align: center;
     border: transparent;
-}
 
-.hero__button-wrap {
-    position: absolute;
-    top:320px;
-    left: 20px;
+    @include mq(desctop) {
+        height: 40px;
+        font-size: 14px;
+        line-height: 1.29;
+        text-align: center;
+    }
 }
 
 .hero__button-prod {
@@ -305,10 +350,221 @@
     background-color: #D41443;
     color: #FFFFFF;
     margin-right: 8px;
+
+    @include mq(desctop) {
+            min-width: 107px;
+            margin-right: 12px;
+        }
 }
 
 .hero__button-how {
     min-width: 62px;
     background-color: #FFFFFF;
     color: #D41443;
+
+    @include mq(desctop) {
+            min-width: 138px;
+        }
 }
+
+.hero__picture-left {
+    position: absolute;
+    
+    @include mq(mobile-only) {
+        display: none;
+    }
+
+        @include mq(tablet) {
+            bottom: 16px;
+            left: 32px;
+        }
+
+         @include mq(desctop) {
+        bottom: 60px;
+        left: 16px;
+        }
+}
+
+.hero__picture-right {
+    position: absolute;
+
+    @include mq(mobile-only) {
+        display: none;
+    }
+
+    @include mq(tablet) {
+        bottom: 0;
+        right: 32px;
+    }
+
+    @include mq(desctop) {
+        bottom: 0px;
+        right: 16px;
+    }
+}
+
+
+.hero__wrap-left-part {
+    position: absolute;
+    width: 114px;
+    bottom: 56px;
+    left: 184px;
+
+    @include mq(desctop) {
+        width: 200px;
+        bottom: 84px;
+        left: 229px;
+    }
+}
+
+
+.hero__text-left {
+    @include mq(mobile-only) {
+        display: none;
+    }
+         color: #FFFFFF;
+
+        @include mq(tablet) {
+        font-size: 8px;
+        line-height: 150%;
+        
+
+        &::after {
+            display: block;
+            content: '';
+            background-image: url(../images/header-hero/arrow-right.svg);
+            background-repeat: no-repeat;
+            width: 18px;
+            height: 18px;
+            margin-top: 7px;
+        }
+ }        
+        
+
+        @include mq(desctop) {
+        font-size: 14px;
+        line-height: 140%;
+        
+         &::after {
+        display: block;
+        content: '';
+        background-image: url(../images/header-hero/arrow-right.svg);
+        background-repeat: no-repeat;
+        width: 26px;
+        height: 26px;
+        margin-top: 20px;
+        }
+    }
+}
+
+.hero__wrap-info {
+    
+    @include mq(mobile-only) {
+        display: none;
+    }
+    position: relative;
+    width: 43px;
+    height: 44px;
+
+    @include mq(desctop) {
+        width: 74px;
+        height: 77px;
+    }
+}
+
+.hero__circle-in-box {
+    margin-left: auto;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+
+    @include mq(desctop) {
+        width: 30px;
+        height: 30px;
+        }
+}
+
+.wrap-info-upper {
+    position: absolute;
+    top: 92px;
+    right: 32px;
+
+    @include mq(desctop) {
+        top: 152px;
+        right: 16px;
+        }
+}
+
+.wrap-info-under {
+    position: absolute;
+    top: 152px;
+    right: 32px;
+
+    @include mq(desctop) {
+        top: 244px;
+        right: 16px;
+        }
+}
+
+.hero__number-text {
+    font-family: 'Titan One';
+    font-size: 28px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #D41443;
+    
+   
+    position: absolute;
+    top: 2px;
+    left: 0px;
+
+
+    @include mq(desctop) {
+            font-size: 46px;
+            line-height: 1.15;
+            top: 4px;
+            left: 0px;
+        }
+}
+
+.hero__estab {
+    font-size: 8px;
+    line-height: 1.25; 
+    color: #FFFFFF;
+
+    @include mq(desctop) {
+            font-size: 14px;
+             line-height: 1.29;
+        }
+}
+
+.estab-upper {
+    position: absolute;
+    bottom:0px;
+    left: 13px;
+
+    @include mq(desctop) {
+            bottom: 0px;
+            left: 19px;
+        }
+
+    
+}
+
+.estab-under {
+    position: absolute;
+    bottom: 0px;
+    left: -8px;
+
+    @include mq(desctop) {
+        bottom: 0px;
+        left: -10px;
+        }
+}
+
+
+
+
+
