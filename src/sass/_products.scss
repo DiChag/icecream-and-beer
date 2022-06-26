@@ -1,4 +1,4 @@
-.products {
+.product {
     padding: 60px 0;
 
     
@@ -100,7 +100,6 @@
 
 &__text::before {
     position: absolute;
-    display: inline-block;
     content: ' ';
 
     width: 26px;
@@ -154,21 +153,34 @@
 }
 
 
-&__heading--cream::before {
+&__heading::before{
     position: absolute;
-    display: inline-block;
     content: ' ';
-
+    
     width: 280px;
     height: 280px;
-
+    
     top: -135px;
     right: 0px;
-
+    
     background-repeat: no-repeat;
     background-size: cover;
 
-   
+    @include mq (tablet){
+        width: 224px;
+        height: 224px;
+    }
+
+    @include mq (desctop){
+        width: 368px;
+        height: 394px;
+        
+        top: -258px;
+        right: -4px;
+    }
+}
+
+&__heading--cream::before {
     background-image: url('../images/products/ice-cream.png');
 
     @include mq (retina) {
@@ -176,9 +188,6 @@
     }
 
  @include mq (tablet) {
-     width: 224px;
-     height: 224px;
-
     background-image: url('../images/products/ice-cream-tablet.png');
     
     @include mq (retina) {
@@ -187,12 +196,6 @@
  }
 
  @include mq (desctop) {
-    width: 368px;
-    height: 394px;
-
-    top: -258px;
-    right: 8px;
-
     background-image: url('../images/products/ice-cream-desktop.png');
     
     @include mq (retina) {
@@ -204,20 +207,6 @@
 
 
 &__heading--coffee::before {
-
-    position: absolute;
-    display: inline-block;
-    content: ' ';
-    
-    width: 280px;
-    height: 280px;
-
-    top: -135px;
-    right: 0px;
-
-    background-repeat: no-repeat;
-    background-size: cover;   
-
     background-image: url('../images/products/ice-coffee.png');
 
     @include mq (retina) {
@@ -225,9 +214,6 @@
         }
 
  @include mq (tablet) {
-        width: 224px;
-        height: 224px;
-        
         background-image: url('../images/products/ice-coffee-tablet.png');
         
         @include mq (retina) {
@@ -236,11 +222,6 @@
     }
         
  @include mq (desctop) {
-        width: 368px;
-        height: 394px;
-        top: -258px;
-        right: 8px;
-        
         background-image: url('../images/products/ice-coffee-desktop.png');
         
         @include mq (retina) {
@@ -251,30 +232,13 @@
 
 
 &__heading--milkshakes::before {
-    position: absolute;
-    display: inline-block;
-    content: ' ';
-
-    width: 280px;
-    height: 280px;
-
-    top: -135px;
-    right: 0px;
-
-    background-repeat: no-repeat;
-    background-size: cover;
-
-
-    background-image: url('../images/products/milkshakes.png');
+     background-image: url('../images/products/milkshakes.png');
 
     @include mq (retina) {
         background-image: url('../images/products/milkshakes-2x.png');
     }
 
  @include mq (tablet) {
-        width: 224px;
-        height: 224px;
-    
         background-image: url('../images/products/milkshakes-tablet.png');
 
     @include mq (retina) {
@@ -282,18 +246,12 @@
     }
     
  @include mq (desctop) {
-        width: 368px;
-        height: 394px;
-        top: -258px;
-        right: 8px;
-    
-        background-image: url('../images/products/milkshakes-desktop.png');
+            background-image: url('../images/products/milkshakes-desktop.png');
     
     @include mq (retina) {
             background-image: url('../images/products/milkshakes-tablet-2x.png');
         }
     }
-
 }
 }
 
