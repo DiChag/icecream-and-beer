@@ -7,17 +7,17 @@
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    width: 320px;
     // overflow: hidden;
 }
 
 .header__container {
-    height: 502px;
+    
     padding-top: 8px;
     background-color: #FFB8CA;
     position: relative;
-
-    @include mq(tablet) {
+    height: 502px;
+    
+    @include mq(tablet-only) {
            padding-top: 32px;
            height: 416px;
         }
@@ -245,6 +245,7 @@
     color: #FFFFFF;
 
     @include mq(tablet) {
+        position: absolute;
         top: 102px;
         left: 32px;
         width: 162px;
@@ -253,6 +254,7 @@
     }
 
         @include mq(desctop) {
+            position: absolute;
             top: 147px;
             left: 16px;
             min-width: 162px;
