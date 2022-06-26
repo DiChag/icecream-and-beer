@@ -16,6 +16,8 @@
 
 
 &__subtitle {
+    margin-bottom: 16px;
+
     font-size: 18px;
     color: var(--pink-text);
 
@@ -63,11 +65,11 @@
 &__grid {
     @include mq (tablet){
         display: flex;
-        margin: 0 -8px;
+        gap: 16px;
     }
     
     @include mq (desctop){
-        margin: 0 -15px;
+       gap: 30px;
     }
 }
 
@@ -81,54 +83,54 @@
     border-radius: 24px;
     
     @include mq (tablet){
-        margin: 136px 8px 0;
+        margin-top: 136px;
         padding: 118px 32px 40px;
         width: 224px;
 
-        flex-basis: calc(100% / 3 - 8px);
+        flex-basis: calc((100% - 16px) / 3);
     }
 
     @include mq (desctop) {
-        margin: 252px 15px 0;
+        margin-top: 252px;
         padding: 165px 63px 60px;
         width: 368px;
 
-        flex-basis: calc(100% / 3 - 15px);
+        flex-basis: calc((100% - 30px) / 3);
     }
 }
 
 
-&__text::before {
-    position: absolute;
-    content: ' ';
+// &__text::before {
+//     position: absolute;
+//     content: ' ';
 
-    width: 26px;
-    height: 6px;
+//     width: 26px;
+//     height: 6px;
 
-    top: 215px;
-    right: 127px;
+//     top: 215px;
+//     right: 127px;
 
-    background-repeat: no-repeat;
-    background-size: cover;
+//     background-repeat: no-repeat;
+//     background-size: cover;
     
-    @include mq (tablet) {
-        top: 170px;
-        right: 99px;
-    }
+//     @include mq (tablet) {
+//         top: 170px;
+//         right: 99px;
+//     }
 
-    @include mq (desctop) {
-        top: 228px;
-        right: 170px;
-    }
+//     @include mq (desctop) {
+//         top: 228px;
+//         right: 170px;
+//     }
         
 
-    background-image: url('../images/products/ellipsis.png');
+//     background-image: url('../images/products/ellipsis.png');
 
-    @include mq (retina) {
-        background-image: url('../images/products/ellipsis@2x.png');
-    }
+//     @include mq (retina) {
+//         background-image: url('../images/products/ellipsis@2x.png');
+//     }
     
-}
+// }
 
 &__cream { 
     background-color: #FFB8CA;
@@ -279,3 +281,52 @@
     fill: var(--red-text);
 }
 }
+
+
+.poprigun {
+    position: absolute;
+    top: 213px;
+    left: 100px;
+    width: 80px;
+    transform: translate(50%);
+}
+
+.ball {
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    border-radius: 50%;
+    left: 15%;
+    animation: ball .5s alternate infinite ease;
+}
+
+
+@keyframes ball{
+    0% {
+        top: 35px;
+        height: 5px;
+        transform: scaleX(1,7);
+        background-color: #5f921c;
+    }
+    50% {
+        height: 5px;
+        transform: scaleX(1);
+        background-color: #f8b456;
+    }
+    100% {
+        top: 0px;
+        background-color: #db5375;
+    }
+
+}
+
+.ball:nth-child(2){
+    left: 45%;
+    animation-delay: .2s;
+}
+.ball:nth-child(3) {
+    left: auto;
+    right: 15%;
+    animation-delay: .3s;
+}
+
