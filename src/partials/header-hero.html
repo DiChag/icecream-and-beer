@@ -1,0 +1,168 @@
+<!--======================
+    ХЕДЕР-ГЕРОЙ
+    ======================-->
+
+<section class="header">
+  <div class="header__container container">
+    <div class="header__wrap">
+      <a class="header__logo">
+        <img src="./images/header-hero/logo.svg" alt="logo" />
+      </a>
+      <!--     
+   =============================
+   КНОПКА ОТКРЫТИЯ-ЗАКРЫТИЯ МЕНЮ
+   ============================= -->
+
+      <div class="header__tablet-wrap">
+        <button
+          class="header__menu-button"
+          type="button"
+          data-menu-button
+          aria-expanded="false"
+          aria-controls="header__mob-menu"
+        >
+          <svg
+            width="20px"
+            height="14px"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="header__icon-burger"
+              href="./images/header-hero/mob-tab_menu/sprite_burger-cross.svg#icon-burger"
+            ></use>
+            <use
+              class="header__icon-close"
+              href="./images/header-hero/mob-tab_menu/sprite_burger-cross.svg#icon-cross"
+            ></use>
+          </svg>
+        </button>
+
+        <button class="header__menu-btn" type="button">
+          <span class="mob-menu__btn-text">Buy now</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 
+    =======================
+    ГЕРОЙ
+    ======================= -->
+
+    <div class="hero header__hero">
+      <!-- <div class="hero_background-circle"></div> -->
+
+      <picture>
+        <!-- для десктопа -->
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ./images/header-hero/hero-pictures/circle_desk.webp    1x,
+            ./images/header-hero/hero-pictures/circle_desk@2x.webp 2x
+          "
+          type="image/webp"
+        />
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ./images/header-hero/hero-pictures/circle_desk.png    1x,
+            ./images/header-hero/hero-pictures/circle_desk@2x.png 2x
+          "
+          type="image/png"
+        />
+
+        <!-- для таблетки -->
+
+        <source
+          media="(min-width: 767px)"
+          srcset="
+            ./images/header-hero/hero-pictures/circle_tab.webp    1x,
+            ./images/header-hero/hero-pictures/circle_tab@2x.webp 2x
+          "
+          type="image/webp"
+        />
+        <source
+          media="(min-width: 767px)"
+          srcset="
+            ./images/header-hero/hero-pictures/circle_tab.png    1x,
+            ./images/header-hero/hero-pictures/circle_tab@2x.png 2x
+          "
+          type="image/png"
+        />
+
+        <!-- для мобильного экрана -->
+
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            ./images/header-hero/hero-pictures/circle_mob.webp    1x,
+            ./images/header-hero/hero-pictures/circle_mob@2x.webp 2x
+          "
+          type="image/webp"
+        />
+
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            ./images/header-hero/hero-pictures/circle_mob.png    1x,
+            ./images/header-hero/hero-pictures/circle_mob@2x.png 2x
+          "
+          type="image/png"
+        />
+
+        <img
+          class="hero__cover-picture"
+          src="./images/header-hero/hero-pictures/circle_mob.png"
+          alt="Elipse-cover"
+          min-width="284px"
+          loading="lazy"
+        />
+      </picture>
+
+      <img
+        class="hero__main-cover"
+        src="./images/header-hero/hero-pictures/ice-cream_mob.png"
+        alt="icecream"
+      />
+
+      <h1 class="hero__title">
+        ice cream made with <span class="hero__title-accent">passion</span>
+      </h1>
+      <div class="hero__button-wrap">
+        <button class="hero__button-prod hero__button" type="button">
+          Products
+        </button>
+        <button class="hero__button-how hero__button" type="button">
+          How it’s made?
+        </button>
+      </div>
+    </div>
+
+    <!-- =================
+    Мобильное меню
+  ========================= -->
+
+    <div class="mob-menu header__mob-menu" id="header__mob-menu" data-menu>
+      <button class="mob-menu__btn-purchase" type="button">
+        <span class="mob-menu__btn-text">Buy now</span>
+      </button>
+
+      <ul class="mob-menu__list">
+        <li class="mob-menu__item">
+          <a class="mob-menu__link" href="">Home</a>
+        </li>
+        <li class="mob-menu__item">
+          <a class="mob-menu__link" href="">About us</a>
+        </li>
+        <li class="mob-menu__item">
+          <a class="mob-menu__link" href="">How it’s made?</a>
+        </li>
+        <li class="mob-menu__item">
+          <a class="mob-menu__link" href="">Our products</a>
+        </li>
+        <li class="mob-menu__item">
+          <a class="mob-menu__link" href="">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
