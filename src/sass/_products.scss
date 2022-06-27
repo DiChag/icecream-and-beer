@@ -1,38 +1,332 @@
-.products__heading {
-    margin-bottom: 70px;
+.product {
+    padding: 60px 0;
+
+    
+&__subtitle,
+&__title,
+&__heading{
+    font-family: 'Titan One';
+    font-weight: 400;
+    line-height: 1.15;
+
+    text-align: center;
+    text-transform: uppercase;
+    }
+
+
+
+&__subtitle {
+    margin-bottom: 16px;
+
+    font-size: 18px;
+    color: var(--pink-text);
+
+    @include mq (tablet){
+        font-size: 26px;
+    }
+
+    @include mq (desctop) {
+        font-size: 30px;
+    }
 }
 
-.products__ellipsis {
-    position: absolute;
-    width: 26px;
-    top: 218px;
-    left: 127px;
 
+&__title {
+    font-size: 34px;
+    margin-bottom: 8px;
+
+    color: var(--red-text);  
+
+    @include mq (tablet) {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+    
+    @include mq (desctop) {
+        font-size: 58px;
+    }
 }
 
-.products__block {
+
+&__text {
+    font-weight: 700;
+    line-height: 1.15;
+    text-align: center;
+    color: var(--white-text);
+    margin-bottom: 32px;
+
+    @include mq(desctop) {
+        margin-bottom: 60px;
+        font-size: 16px;
+    }
+}
+
+
+&__grid {
+    @include mq (tablet){
+        display: flex;
+        gap: 16px;
+    }
+    
+    @include mq (desctop){
+       gap: 30px;
+    }
+}
+
+&__block {
     position: relative;
     text-align: center;
     padding: 160px 40px 40px;
-    margin-top: 140px;
+    margin-top: 132px;
+    
     width: 280px;
     border-radius: 24px;
+    
+    @include mq (tablet){
+        margin-top: 136px;
+        padding: 118px 32px 40px;
+        width: 224px;
+
+        flex-basis: calc((100% - 16px) / 3);
+    }
+
+    @include mq (desctop) {
+        margin-top: 252px;
+        padding: 165px 63px 60px;
+        width: 368px;
+
+        flex-basis: calc((100% - 30px) / 3);
+    }
 }
 
-.products__cream {
+
+// &__text::before {
+//     position: absolute;
+//     content: ' ';
+
+//     width: 26px;
+//     height: 6px;
+
+//     top: 215px;
+//     right: 127px;
+
+//     background-repeat: no-repeat;
+//     background-size: cover;
+    
+//     @include mq (tablet) {
+//         top: 170px;
+//         right: 99px;
+//     }
+
+//     @include mq (desctop) {
+//         top: 228px;
+//         right: 170px;
+//     }
+        
+
+//     background-image: url('../images/products/ellipsis.png');
+
+//     @include mq (retina) {
+//         background-image: url('../images/products/ellipsis@2x.png');
+//     }
+    
+// }
+
+&__cream { 
     background-color: #FFB8CA;
 }
-
-.products__coffee {
+&__coffee {
     background-color: #F0D1A5;
 }
-
-.products__milkshakes {
+&__milkshakes {
     background-color: #C2E297;
 }
 
-.products__image {
-    position: absolute;
-    top: -138px;
-    left: 0px;
+
+&__heading {
+    margin-bottom: 70px;
+    font-size: 20px;
+
+    color: var(--white-text);
+
+    @include mq (desctop) {
+        font-size: 30px;
+    }
 }
+
+
+&__heading::before{
+    position: absolute;
+    content: ' ';
+    
+    width: 280px;
+    height: 280px;
+    
+    top: -135px;
+    right: 0px;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mq (tablet){
+        width: 224px;
+        height: 224px;
+    }
+
+    @include mq (desctop){
+        width: 368px;
+        height: 394px;
+        
+        top: -258px;
+        right: -4px;
+    }
+}
+
+&__heading--cream::before {
+    background-image: url('../images/products/ice-cream.png');
+
+    @include mq (retina) {
+        background-image: url('../images/products/ice-cream-2x.png');
+    }
+
+ @include mq (tablet) {
+    background-image: url('../images/products/ice-cream-tablet.png');
+    
+    @include mq (retina) {
+        background-image: url('../images/products/ice-cream-tablet-2x.png');
+    }
+ }
+
+ @include mq (desctop) {
+    background-image: url('../images/products/ice-cream-desktop.png');
+    
+    @include mq (retina) {
+        background-image: url('../images/products/ice-cream-desktop-2x.png');
+    }
+ }
+
+}
+
+
+&__heading--coffee::before {
+    background-image: url('../images/products/ice-coffee.png');
+
+    @include mq (retina) {
+        background-image: url('../images/products/ice-coffee-2x.png');
+        }
+
+ @include mq (tablet) {
+        background-image: url('../images/products/ice-coffee-tablet.png');
+        
+        @include mq (retina) {
+            background-image: url('../images/products/ice-coffee-tablet-2x.png');
+        }
+    }
+        
+ @include mq (desctop) {
+        background-image: url('../images/products/ice-coffee-desktop.png');
+        
+        @include mq (retina) {
+            background-image: url('../images/products/ice-coffee-desktop-2x.png');
+        }
+    }
+}
+
+
+&__heading--milkshakes::before {
+     background-image: url('../images/products/milkshakes.png');
+
+    @include mq (retina) {
+        background-image: url('../images/products/milkshakes-2x.png');
+    }
+
+ @include mq (tablet) {
+        background-image: url('../images/products/milkshakes-tablet.png');
+
+    @include mq (retina) {
+        background-image: url('../images/products/milkshakes-tablet-2x.png');
+    }
+    
+ @include mq (desctop) {
+            background-image: url('../images/products/milkshakes-desktop.png');
+    
+    @include mq (retina) {
+            background-image: url('../images/products/milkshakes-tablet-2x.png');
+        }
+    }
+}
+}
+
+
+&__button {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--white-text);
+    border: 0;
+    padding: 0;
+}
+
+
+&__svg {
+    position: absolute;
+    top: 12px;
+    right: 13px;
+    fill: var(--menu-backgrounds);
+}
+
+&__svg:hover,
+&__svg:focus {
+    fill: var(--red-text);
+}
+}
+
+
+.poprigun {
+    position: absolute;
+    top: 213px;
+    left: 100px;
+    width: 80px;
+    transform: translate(50%);
+}
+
+.ball {
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    border-radius: 50%;
+    left: 15%;
+    animation: ball .5s alternate infinite ease;
+}
+
+
+@keyframes ball{
+    0% {
+        top: 35px;
+        height: 5px;
+        transform: scaleX(1,7);
+        background-color: #5f921c;
+    }
+    50% {
+        height: 5px;
+        transform: scaleX(1);
+        background-color: #f8b456;
+    }
+    100% {
+        top: 0px;
+        background-color: #db5375;
+    }
+
+}
+
+.ball:nth-child(2){
+    left: 45%;
+    animation-delay: .2s;
+}
+.ball:nth-child(3) {
+    left: auto;
+    right: 15%;
+    animation-delay: .3s;
+}
+
