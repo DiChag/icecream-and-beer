@@ -3,4 +3,4 @@
           el: ".swiper-pagination",
             clickable: true,
         },
-      });
+  });
