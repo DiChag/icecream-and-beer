@@ -375,6 +375,7 @@ button.swiper-pagination-bullet {
     opacity: var(--swiper-pagination-bullet-opacity, 1);
     background: url(../images/slider/Vector.svg);
         background-repeat: no-repeat;
+        border-radius: 0;
 }
 
 .swiper-pagination-vertical.swiper-pagination-bullets,
