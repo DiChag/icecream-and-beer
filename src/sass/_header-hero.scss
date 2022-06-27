@@ -184,7 +184,12 @@
     display: block;
     padding: 0;
     margin: 0;
+
+    @include mq(desctop) {
+        display: flex;
+    }
 }
+
 
 .mob-menu__item {
     font-weight: 700;
@@ -209,6 +214,49 @@
 .mob-menu__link:focus {
     color: #D41443
 }
+
+// Список меню ХЕДЕР-ДЕСКТОП
+
+.header__menu-desctop {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    
+    @include mq(desctop) {
+        display: flex;
+    }
+}
+
+.header__menu-item {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+
+    &:not(:last-child) {
+     margin-right: 32px;   
+    }
+    
+}
+
+.header__menu-link {
+    text-decoration: none;
+    color: #FFFFFF;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: block;
+
+}
+
+.header__menu-link:hover,
+.header__menu-link:focus {
+    color: #D41443
+}
+
+
+
+
 
 
 
