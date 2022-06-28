@@ -339,9 +339,11 @@
    @include mq (mobile-only){
       box-shadow: none;
    }
+}
 
-  
-  
+.map__modal{
+   width: 100%;
+   height: 100%;
 }
 // /Кнопка закрытия
  .map__close-btn {
