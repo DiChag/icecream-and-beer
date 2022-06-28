@@ -1,2 +1,2 @@
 import './js/advantages';
-import './js/button-close-open';
+import './js/map-close-open';
