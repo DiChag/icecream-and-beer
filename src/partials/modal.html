@@ -1,0 +1,54 @@
+<!-- backdrop -->
+
+<div class="backdrop is-hidden" data-modal>
+
+    <div class="modal">
+
+        <!-- <button type="button" class="modal__close-btn" data-modal-close>
+
+           
+
+        </button> -->
+
+        <div class="pay-card">
+            <img src="./images/modal/pay-card.png">
+        </div>
+
+        <h4 class="modal__h4">Update payment method</h4>
+        <p class="modal__descr">Uptade your card details</p>
+
+        <form class="modal__form">
+            <ul class="modal__form-list">
+                <li class="modal__item">
+                    <label class="modal__label" for="user_name">Name on card</label>
+                    <input type="name" name="user_name" id="user_name" placeholder="Olivia Rhye" class="modal__input modal__input--1">
+                </li>
+
+                <li class="modal__item">
+                    <label class="modal__label" for="user_expiry">Expiry</label>
+                    <input type="expiry" name="expiry" id="user_expiry" placeholder="06/24" class="modal__input modal__input--2">
+                </li>
+            </ul>
+            <ul class="modal__form-list modal__form-list--2">
+                <li class="modal__item">
+                    <label class="modal__label" for="user_expiry">Card number</label>
+                    <input type="expiry" name="expiry" id="user_expiry" placeholder="123123123123" class="modal__input modal__input--1">
+                </li>
+                <li class="modal__item">
+                    <label class="modal__label" for="user_cvv">CVV</label>
+                    <input type="password" name="cvv" id="user_cvv" placeholder="CVV" class="modal__input modal__input--2">
+                </li>
+            </ul>
+
+            <div class="modal__button-list">
+                <button type="button" class="modal__button modal__button--cansel"  data-modal-close >Cansel</button>
+                <button type="submit" class="modal__button modal__button--update">Update</button>
+            </div>
+
+        </form>
+
+
+
+
+    </div>
+</div>
