@@ -34,6 +34,9 @@
     justify-content: space-between;
     align-items: center;
 
+
+    position: relative;
+
     @include mq(tablet) {
        justify-content: space-between;
     }
@@ -56,13 +59,30 @@
     margin: 0;
     padding: 0;
     z-index: 20;
-    
+
+
+
+  @include mq(tablet-only) {
+    top: 18px;
+    right: 192px;
+    position: absolute;
+}
 
     @include mq (desctop) {
             display: none;
         }
 }
 
+
+.header__menu-button.is-open  {
+    display: block;
+    @include mq(tablet-only) {
+            top: -12px;
+            right: 0;
+            position: absolute;
+        }
+
+}
 
 .header__menu-button .header__icon-close {
     display: none;
@@ -401,11 +421,7 @@
 .hero__button {
     height: 24px;
     border-radius: 20px;
-    font-family: inherit;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 8px;
-    line-height: 1.25;
+    
     text-align: center;
     border: transparent;
     transform: scale(1);
@@ -428,10 +444,8 @@
 .hero__button-prod {
     min-width: 62px;
     background-color: #D41443;
-    color: #FFFFFF;
     margin-right: 8px;
 
-   
     @include mq(desctop) {
             min-width: 107px;
             margin-right: 12px;
@@ -441,14 +455,36 @@
 .hero__button-how {
     min-width: 62px;
     background-color: #FFFFFF;
-    color: #D41443;
-
-
-
+    
     @include mq(desctop) {
             min-width: 138px;
         }
 }
+
+.hero-link {
+    display: flex;
+        justify-content: center;
+    font-weight: 400;
+        font-size: 8px;
+        line-height: 1.25;
+
+    @include mq(desctop) {
+
+        font-size: 14px;
+        line-height: 1.29;
+        }
+}
+
+.hero__link-prod {
+        color: #FFFFFF;
+}
+
+
+.hero__link-how {
+    color: #D41443;
+}
+
+
 
 .hero__picture-left {
     position: absolute;
