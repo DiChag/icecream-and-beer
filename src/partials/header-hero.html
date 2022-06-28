@@ -5,10 +5,9 @@
 <section class="header">
   <div class="header__container container">
     <div class="header__wrap">
-      <a class="header__logo">
+      <a class="header__logo" href="">
         <img src="./images/header-hero/logo.svg" alt="logo" />
       </a>
-
 
       <ul class="header__menu-desctop">
         <li class="header__menu-item">
@@ -27,8 +26,8 @@
           <a class="header__menu-link" href="">Contact</a>
         </li>
       </ul>
-        
-   <!-- =============================
+
+      <!-- =============================
    КНОПКА ОТКРЫТИЯ-ЗАКРЫТИЯ МЕНЮ
    =============================  -->
 
@@ -56,9 +55,72 @@
           </svg>
         </button>
 
-        <button class="header__menu-btn" type="button">
+        <!-- МОДАЛЬНОЕ ОКНО -->
+
+        <button class="header__menu-btn" type="button" data-modal-open>
           <span class="mob-menu__btn-text">Buy now</span>
         </button>
+
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal-wrapper">
+            <button class="modal-button" data-modal-close>
+              <svg class="icon-close" width="18px" height="18px">
+                <use
+                  href="./images/header-hero/mob-tab_menu/sprite_burger-cross.svg#icon-cross"
+                ></use>
+              </svg>
+            </button>
+
+            <strong class="form-title">Pay your order</strong>
+            <form class="modal-form">
+              <label class="form-modal-group">
+                <span class="form-modal-label">Name on Card</span>
+                <input
+                  class="form-modal-input"
+                  type="text"
+                  name="user-name"
+                  placeholder="John Smith"
+                />
+              </label>
+
+              <label class="form-modal-group">
+                <span class="form-modal-label">Expiry</span>
+                <input
+                  class="form-modal-input"
+                  type="tel"
+                  name="user-phone"
+                  placeholder="06/24"
+                />
+              </label>
+
+              <label class="form-modal-group">
+                <span class="form-modal-label">Number card</span>
+                <input
+                  class="form-modal-input"
+                  type="email"
+                  name="user-mail"
+                  placeholder="1111 2222 3333 4444"
+                />
+              </label>
+
+              <label class="form-modal-group">
+                <span class="form-modal-label">CVV</span>
+                <input
+                  class="form-modal-input"
+                  type="email"
+                  name="user-mail"
+                  placeholder="123"
+                />
+              </label>
+              <div class="wrap-button">
+                <button class="btn-send send-pay" type="submit">Pay</button>
+                <button class="btn-send send-cancel" type="submit">
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -69,9 +131,6 @@
 
     <div class="hero header__hero">
       <!-- <div class="hero_background-circle"></div> -->
-
-
-
 
       <!-- ELLIPSE -->
       <picture>
@@ -140,14 +199,10 @@
           loading="lazy"
         />
       </picture>
-      
 
-
-      
-
-<!-- ICE_CREAM -->
-       <picture>
-<!-- для десктопа -->
+      <!-- ICE_CREAM -->
+      <picture>
+        <!-- для десктопа -->
         <source
           media="(min-width: 1200px)"
           srcset="
@@ -166,8 +221,8 @@
           type="image/png"
         />
 
-            <!-- для таблетки -->
-         <source
+        <!-- для таблетки -->
+        <source
           media="(min-width: 767px)"
           srcset="
             ./images/header-hero/hero-pictures/ice-cream_tab.webp    1x,
@@ -185,8 +240,7 @@
           type="image/png"
         />
 
-        
-         <!-- для мобильного экрана -->
+        <!-- для мобильного экрана -->
 
         <source
           media="(max-width: 767px)"
@@ -206,13 +260,13 @@
           type="image/png"
         />
 
-      <img
-        class="hero__main-cover"
-        src="./images/header-hero/hero-pictures/ice-cream_mob.png"
-        alt="icecream"
-        min-width="171px"
-        loading="lazy"
-      />
+        <img
+          class="hero__main-cover"
+          src="./images/header-hero/hero-pictures/ice-cream_mob.png"
+          alt="icecream"
+          min-width="171px"
+          loading="lazy"
+        />
       </picture>
 
       <h1 class="hero__title">
@@ -227,10 +281,8 @@
         </button>
       </div>
 
-     
-
       <picture>
-     <!-- для десктопа -->
+        <!-- для десктопа -->
         <source
           media="(min-width: 1200px)"
           srcset="
@@ -249,8 +301,8 @@
           type="image/png"
         />
 
-            <!-- для таблетки -->
-         <source
+        <!-- для таблетки -->
+        <source
           media="(min-width: 767px)"
           srcset="
             ./images/header-hero/hero-pictures/cup-of-milk_tab.webp    1x,
@@ -267,22 +319,25 @@
           "
           type="image/png"
         />
-     
-      <img src="./images/header-hero/hero-pictures/cup-of-milk_tab.png" 
-     alt="cup-of-milk"
-     class="hero__picture-left"
-     min-width="152px"
-     loading="lazy">
-     </picture>
 
+        <img
+          src="./images/header-hero/hero-pictures/cup-of-milk_tab.png"
+          alt="cup-of-milk"
+          class="hero__picture-left"
+          min-width="152px"
+          loading="lazy"
+        />
+      </picture>
 
-     <div class="hero__wrap-left-part">
-     <p class="hero__text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-      sed do eiusmod tempor incididunt ut labore et </p>
+      <div class="hero__wrap-left-part">
+        <p class="hero__text-left">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et
+        </p>
       </div>
 
       <picture>
-      <!-- для десктопа -->
+        <!-- для десктопа -->
         <source
           media="(min-width: 1200px)"
           srcset="
@@ -301,8 +356,8 @@
           type="image/png"
         />
 
-            <!-- для таблетки -->
-         <source
+        <!-- для таблетки -->
+        <source
           media="(min-width: 767px)"
           srcset="
             ./images/header-hero/hero-pictures/girl-ice_tab.webp    1x,
@@ -320,37 +375,33 @@
           type="image/png"
         />
 
-        <img src="./images/header-hero/hero-pictures/girl-ice_tab.png" 
-     alt="girl-and-ice"
-     class="hero__picture-right"
-     min-width="190px"
-     loading="lazy">
+        <img
+          src="./images/header-hero/hero-pictures/girl-ice_tab.png"
+          alt="girl-and-ice"
+          class="hero__picture-right"
+          min-width="190px"
+          loading="lazy"
+        />
       </picture>
-      
 
-
-      <div class="hero__wrap-info  wrap-info-upper">
+      <div class="hero__wrap-info wrap-info-upper">
         <div class="hero__circle-in-box"></div>
         <p class="hero__number-text">16</p>
         <span class="hero__estab estab-upper">cafes</span>
       </div>
 
-      <div class="hero__wrap-info   wrap-info-under">
+      <div class="hero__wrap-info wrap-info-under">
         <div class="hero__circle-in-box"></div>
         <p class="hero__number-text">23</p>
         <span class="hero__estab estab-under">food trucks</span>
       </div>
-     
-
-
-
-
-
     </div>
 
     <!-- =================
     Мобильное меню
   ========================= -->
+
+    <!-- ORIGIN -->
 
     <div class="mob-menu header__mob-menu" id="header__mob-menu" data-menu>
       <button class="mob-menu__btn-purchase" type="button">
