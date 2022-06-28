@@ -82,6 +82,10 @@
             position: absolute;
         }
 
+    @include mq(desctop) {
+        display: none;
+     }
+
 }
 
 .header__menu-button .header__icon-close {
@@ -158,6 +162,10 @@
 
  @include mq(tablet) {
     height: 416px;
+ }
+
+ @include mq(desctop) {
+     display: none;
  }
 }
 
@@ -1112,17 +1120,23 @@ animation: bounce-in-right 1.7s both;
 
 .modal-wrapper {
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     padding: 20px;
     transform: translate(-50%, -50%);
-    width: 350px;
+    width: 300px;
     height: 450px;
     background-color: wheat;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 18px;
 
+    @include mq(tablet) {
+        top: 40%;
+         width: 350px;
+        }
+
     @include mq(desctop) {
+        top: 50%;
         width: 450px;
         height: 581px;
     }
