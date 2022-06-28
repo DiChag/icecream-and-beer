@@ -57,13 +57,13 @@
 
         <!-- МОДАЛЬНОЕ ОКНО -->
 
-        <button class="header__menu-btn" type="button" data-modal-open>
+        <button class="header__menu-btn" type="button" data-modal-open-window>
           <span class="mob-menu__btn-text">Buy now</span>
         </button>
 
         <div class="backdrop is-hidden" data-modal>
           <div class="modal-wrapper">
-            <button class="modal-button" data-modal-close>
+            <button class="modal-button" data-modal-close-window>
               <svg class="icon-close" width="18px" height="18px">
                 <use
                   href="./images/header-hero/mob-tab_menu/sprite_burger-cross.svg#icon-cross"
@@ -408,7 +408,11 @@
     <!-- ORIGIN -->
 
     <div class="mob-menu header__mob-menu" id="header__mob-menu" data-menu>
-      <button class="mob-menu__btn-purchase" type="button">
+      <button
+        class="mob-menu__btn-purchase"
+        type="button"
+        data-modal-open-window
+      >
         <span class="mob-menu__btn-text">Buy now</span>
       </button>
 

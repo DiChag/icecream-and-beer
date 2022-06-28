@@ -30,6 +30,35 @@
     <!-- <script type="module" src="./slider.js"></script> -->
     <script type="module" src="./js/slider.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+     <!-- AOS scroll animation script-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  
+  <script>
+    (() => {
+      const refs = {
+        openModalBtn: document.querySelector("[data-modal-open]"),
+        closeModalBtn: document.querySelector("[data-modal-close]"),
+        modal: document.querySelector("[data-modal]"),
+      };
+
+      refs.openModalBtn.addEventListener("click", toggleModal);
+      refs.closeModalBtn.addEventListener("click", toggleModal);
+
+      function toggleModal() {
+        document.body.classList.toggle("modal-open");
+        refs.modal.classList.toggle("is-hidden");
+      }
+    })();
+  </script>
+
+  
+  
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
     <!-- AOS scroll animation script-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -42,6 +71,7 @@
           closeModalBtn: document.querySelector('[data-modal-close]'),
           modal: document.querySelector('[data-modal]'),
         };
+
 
         refs.openModalBtn.addEventListener('click', toggleModal);
         refs.closeModalBtn.addEventListener('click', toggleModal);
