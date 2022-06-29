@@ -133,13 +133,13 @@
   }
   @include mq(mobile) {
     margin-bottom: 28px;
-    font-size: $text-xxs;
+    font-size: 12px;
     line-height: 1.62;
     letter-spacing: 0.04em;
   }
   @include mq(tablet) {
     margin-bottom: 20px;
-    font-size: $text-xs;
+    font-size: 14px;
     line-height: 1.76;
   }
   @include mq(desktop) {
