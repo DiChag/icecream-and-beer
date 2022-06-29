@@ -15,16 +15,13 @@
 
 .contact__list {
   display: flex;
+  justify-content: center;
+  gap: 32px;
 
   @include mq(mobile-only) {
     display: block;
   }
-  @include mq(tablet) {
-    margin: 0 -32px;
-  }
-  @include mq(desctop) {
-    margin: 0 -16px;
-  }
+
 }
 
 .card {
@@ -33,31 +30,30 @@
   line-height: 1.86;
   text-align: left;
   min-width: 280px;
+@include mq (mobile-only){
+   margin-bottom: 20px;
+}
+
   @include mq(tablet) {
     font-size: 14px;
+    min-width: 224px;
   }
   @include mq(desctop) {
     font-size: 16px;
+    min-width: 368px;
+    padding: 40px;
   }
 
   padding: 40px 32px;
 
   border-radius: 24px;
-  margin-bottom: 20px;
+ 
   box-shadow: 0px 8px 30px 0px rgba(212, 20, 67, 0.1);
   background: var(--primary-backgrounds);
 
-  flex-basis: calc(100% / 3 - 16px);
+//   flex-basis: calc(100% / 3 - 16px);
 
-  @include mq(tablet) {
-    min-width: 224px;
-    margin: 0 16px;
-  }
 
-  @include mq(desctop) {
-    min-width: 368px;
-    padding: 40px;
-  }
 
   &__text,
   &__link {
