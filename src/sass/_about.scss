@@ -1,29 +1,35 @@
 .about {
   padding-top: 60px;
   padding-bottom: 20px;
-  background-color: var(--secondary-backgrounds);
+  position: relative;
   text-align: center;
+  
+  background-color: var(--secondary-backgrounds);z-index: 0;
 
   @include mq(mobile-only) {
-    background-image: url(../images/about/milk/millk-mob.png);
+    background-image: url(../images/about/milk/millk-mob.png);z-index: 1;
     @include mq(retina) {
-      background-image: url(../images/about/milk/millk-mob@2x.png);
+      background-image: url(../images/about/milk/millk-mob@2x.png);z-index: 1;
     }
 
+    height: auto;
+    background-size: 280px 133px;
     background-repeat: no-repeat;
-    background-position: 0% 90%, 100% 90%;
-    background-size: 40px, 69px;
+    background-position: top 70% left 70%;
+    background-size: contain;
 
     @include mq(desktop) {
-      background-image: url(../images/about/milk/milk-desk.png);
+      background-image: url(../images/about/milk/milk-desk.png);z-index: 1;
       @include mq(retina) {
-        background-image: url(../images/about/milk/milk-desk.@2x.png);
+        background-image: url(../images/about/milk/milk-desk.@2x.png);z-index: 1;
       }
     }
 
+    height: auto;
+    background-size: 1200px 521px;
     background-repeat: no-repeat;
-    background-position: 0% 100%, 100% 100%;
-    background-size: 162px, 269px;
+    background-position: 70% 70%;
+    background-size: contain;
   }
 }
 
@@ -72,10 +78,12 @@
   }
   @include mq(tablet) {
     margin-bottom: 50px;
+    min-width: 429px;
     font-size: 48px;
   }
   @include mq(desktop) {
     margin-bottom: 55px;
+    min-width: 534px;
     font-size: 58px;
   }
 }
@@ -83,7 +91,7 @@
 .about__content {
   @include mq(tablet) {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-end;
   }
   @include mq(desktop) {
@@ -170,7 +178,7 @@
   width: 176px;
   height: 44px;
 
-  background-color: var(--copyrigth-color);
+  background-color: var(--color-focus);
   border: none;
   border-radius: 22px;
 
@@ -178,7 +186,7 @@
 
   &:hover,
   &:focus {
-    background-color: var(--color-focus);
+    background-color: var(--copyrigth-color);
   }
 }
 
