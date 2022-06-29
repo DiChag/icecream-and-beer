@@ -136,13 +136,13 @@
 
 }
 .swp {
-padding: 60px 0;
+padding: 30px 0;
 padding-bottom: 0;
 @include mq(tablet-only) {
-    padding: 60px 0 20px 0;
+    padding: 30px 0 20px 0;
 }
 @include mq(desctop) {
-    padding: 120px 0;
-    padding-bottom: 60px;
+    padding: 60px 0;
+  
 }
 }
