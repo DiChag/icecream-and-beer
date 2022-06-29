@@ -1,5 +1,6 @@
 .product {
     padding: 60px 0;
+    
 
     
 &__subtitle,
@@ -99,6 +100,10 @@
     }
 }
 
+&__block:hover {
+    transform: scale(1.03);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 12%), 0 4px 4px rgb(0 0 0 / 6%), 1px 4px 6px rgb(0 0 0 / 16%);
+}
 
 // &__text::before {
 //     position: absolute;
@@ -280,18 +285,30 @@
 &__svg:focus {
     fill: var(--red-text);
 }
-}
 
 
-.poprigun {
+
+&__poprigun {
     position: absolute;
-    top: 213px;
-    left: 100px;
+
+    top: 202px;
+    left: 61px;
+
     width: 80px;
     transform: translate(50%);
+
+    @include mq (tablet) {
+        top: 154px;
+        left: 34px;
+    }
+
+    @include mq (desctop){
+        top: 213px;
+        left: 100px;
+    }
 }
 
-.ball {
+&__ball {
     width: 7px;
     height: 7px;
     position: absolute;
@@ -306,27 +323,27 @@
         top: 35px;
         height: 5px;
         transform: scaleX(1,7);
-        background-color: #5f921c;
+        background-color: #acf085;
     }
     50% {
         height: 5px;
         transform: scaleX(1);
-        background-color: #f8b456;
+        background-color: #f3cb93;
     }
     100% {
         top: 0px;
-        background-color: #db5375;
+        background-color: #e7839c;
     }
 
 }
 
-.ball:nth-child(2){
+&__ball:nth-child(2){
     left: 45%;
     animation-delay: .2s;
 }
-.ball:nth-child(3) {
+&__ball:nth-child(3) {
     left: auto;
     right: 15%;
     animation-delay: .3s;
 }
-
+}
