@@ -7,7 +7,7 @@
   @include mq(mobile-only) {
     background-image: url(../images/about/milk/millk-mob.png);
     @include mq(retina) {
-      background-image: url(../images/about-bgmilk-right-mob@2x.png);
+      background-image: url(../images/about/milk/millk-mob@2x.png);
     }
 
     background-repeat: no-repeat;
