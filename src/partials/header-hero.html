@@ -14,16 +14,16 @@
           <a class="header__menu-link" href="">Home</a>
         </li>
         <li class="header__menu-item">
-          <a class="header__menu-link" href="">About us</a>
+          <a class="header__menu-link" href="#about-section">About us</a>
         </li>
         <li class="header__menu-item">
-          <a class="header__menu-link" href="">How it’s made?</a>
+          <a class="header__menu-link" href="#about-section">How it’s made?</a>
         </li>
         <li class="header__menu-item">
-          <a class="header__menu-link" href="">Our products</a>
+          <a class="header__menu-link" href="#product-section">Our products</a>
         </li>
         <li class="header__menu-item">
-          <a class="header__menu-link" href="">Contact</a>
+          <a class="header__menu-link" href="#contacts-section">Contact</a>
         </li>
       </ul>
 
@@ -57,13 +57,13 @@
 
         <!-- МОДАЛЬНОЕ ОКНО -->
 
-        <button class="header__menu-btn" type="button" data-modal-open>
+        <button class="header__menu-btn" type="button" data-modal-open-window>
           <span class="mob-menu__btn-text">Buy now</span>
         </button>
 
         <div class="backdrop is-hidden" data-modal>
           <div class="modal-wrapper">
-            <button class="modal-button" data-modal-close>
+            <button class="modal-button" data-modal-close-window>
               <svg class="icon-close" width="18px" height="18px">
                 <use
                   href="./images/header-hero/mob-tab_menu/sprite_burger-cross.svg#icon-cross"
@@ -130,8 +130,6 @@
     ======================= -->
 
     <div class="hero header__hero">
-      <!-- <div class="hero_background-circle"></div> -->
-
       <!-- ELLIPSE -->
       <picture>
         <!-- для десктопа -->
@@ -273,11 +271,17 @@
         ice cream made with <span class="hero__title-accent">passion</span>
       </h1>
       <div class="hero__button-wrap">
-        <button class="hero__button-prod hero__button" type="button">
-          Products
+        <button
+          class="hero__button-prod hero__button"
+          type="button"
+          href="#product-section"
+        >
+          <a class="hero-link hero__link-prod" href="#product-section">
+            Products
+          </a>
         </button>
         <button class="hero__button-how hero__button" type="button">
-          How it’s made?
+          <a class="hero-link hero__link-how" href="#"> How it’s made? </a>
         </button>
       </div>
 
@@ -404,25 +408,88 @@
     <!-- ORIGIN -->
 
     <div class="mob-menu header__mob-menu" id="header__mob-menu" data-menu>
-      <button class="mob-menu__btn-purchase" type="button">
+      <button
+        class="mob-menu__btn-purchase"
+        type="button"
+        data-modal-open-inside
+      >
         <span class="mob-menu__btn-text">Buy now</span>
       </button>
+
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal-wrapper">
+          <button class="modal-button" data-modal-close-inside>
+            <svg class="icon-close" width="18px" height="18px">
+              <use
+                href="./images/header-hero/mob-tab_menu/sprite_burger-cross.svg#icon-cross"
+              ></use>
+            </svg>
+          </button>
+
+          <strong class="form-title">Pay your order</strong>
+          <form class="modal-form">
+            <label class="form-modal-group">
+              <span class="form-modal-label">Name on Card</span>
+              <input
+                class="form-modal-input"
+                type="text"
+                name="user-name"
+                placeholder="John Smith"
+              />
+            </label>
+
+            <label class="form-modal-group">
+              <span class="form-modal-label">Expiry</span>
+              <input
+                class="form-modal-input"
+                type="tel"
+                name="user-phone"
+                placeholder="06/24"
+              />
+            </label>
+
+            <label class="form-modal-group">
+              <span class="form-modal-label">Number card</span>
+              <input
+                class="form-modal-input"
+                type="email"
+                name="user-mail"
+                placeholder="1111 2222 3333 4444"
+              />
+            </label>
+
+            <label class="form-modal-group">
+              <span class="form-modal-label">CVV</span>
+              <input
+                class="form-modal-input"
+                type="email"
+                name="user-mail"
+                placeholder="123"
+              />
+            </label>
+            <div class="wrap-button">
+              <button class="btn-send send-pay" type="submit">Pay</button>
+              <button class="btn-send send-cancel" type="submit">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
 
       <ul class="mob-menu__list">
         <li class="mob-menu__item">
           <a class="mob-menu__link" href="">Home</a>
         </li>
         <li class="mob-menu__item">
-          <a class="mob-menu__link" href="">About us</a>
+          <a class="mob-menu__link" href="#about-section">About us</a>
         </li>
         <li class="mob-menu__item">
-          <a class="mob-menu__link" href="">How it’s made?</a>
+          <a class="mob-menu__link" href="#about-section">How it’s made?</a>
         </li>
         <li class="mob-menu__item">
-          <a class="mob-menu__link" href="">Our products</a>
+          <a class="mob-menu__link" href="#product-section">Our products</a>
         </li>
         <li class="mob-menu__item">
-          <a class="mob-menu__link" href="">Contact</a>
+          <a class="mob-menu__link" href="#contacts-section">Contact</a>
         </li>
       </ul>
     </div>

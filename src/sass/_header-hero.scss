@@ -34,6 +34,9 @@
     justify-content: space-between;
     align-items: center;
 
+
+    position: relative;
+
     @include mq(tablet) {
        justify-content: space-between;
     }
@@ -56,13 +59,34 @@
     margin: 0;
     padding: 0;
     z-index: 20;
-    
+
+
+
+  @include mq(tablet-only) {
+    top: 18px;
+    right: 192px;
+    position: absolute;
+}
 
     @include mq (desctop) {
             display: none;
         }
 }
 
+
+.header__menu-button.is-open  {
+    display: block;
+    @include mq(tablet-only) {
+            top: -12px;
+            right: 0;
+            position: absolute;
+        }
+
+    @include mq(desctop) {
+        display: none;
+     }
+
+}
 
 .header__menu-button .header__icon-close {
     display: none;
@@ -139,6 +163,10 @@
  @include mq(tablet) {
     height: 416px;
  }
+
+ @include mq(desctop) {
+     display: none;
+ }
 }
 
 
@@ -182,7 +210,7 @@
             width: 8px;
             height: 10px;
             display: inline-flex;
-            margin-left: 25px;
+            margin-left: 20px;
     }
 }
 
@@ -401,11 +429,7 @@
 .hero__button {
     height: 24px;
     border-radius: 20px;
-    font-family: inherit;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 8px;
-    line-height: 1.25;
+    
     text-align: center;
     border: transparent;
     transform: scale(1);
@@ -428,10 +452,8 @@
 .hero__button-prod {
     min-width: 62px;
     background-color: #D41443;
-    color: #FFFFFF;
     margin-right: 8px;
 
-   
     @include mq(desctop) {
             min-width: 107px;
             margin-right: 12px;
@@ -441,14 +463,36 @@
 .hero__button-how {
     min-width: 62px;
     background-color: #FFFFFF;
-    color: #D41443;
-
-
-
+    
     @include mq(desctop) {
             min-width: 138px;
         }
 }
+
+.hero-link {
+    display: flex;
+        justify-content: center;
+    font-weight: 400;
+        font-size: 8px;
+        line-height: 1.25;
+
+    @include mq(desctop) {
+
+        font-size: 14px;
+        line-height: 1.29;
+        }
+}
+
+.hero__link-prod {
+        color: #FFFFFF;
+}
+
+
+.hero__link-how {
+    color: #D41443;
+}
+
+
 
 .hero__picture-left {
     position: absolute;
@@ -1076,17 +1120,23 @@ animation: bounce-in-right 1.7s both;
 
 .modal-wrapper {
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     padding: 20px;
     transform: translate(-50%, -50%);
-    width: 350px;
+    width: 300px;
     height: 450px;
     background-color: wheat;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 18px;
 
+    @include mq(tablet) {
+        top: 40%;
+         width: 350px;
+        }
+
     @include mq(desctop) {
+        top: 50%;
         width: 450px;
         height: 581px;
     }
