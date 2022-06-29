@@ -99,8 +99,10 @@
     }
 }
 
-&__block:hover {
-    transform: scale(1.03);
+&__block:hover,
+&__block:focus,
+ {
+    transform: scale(1.02);
     box-shadow: 0 1px 1px rgb(0 0 0 / 12%), 0 4px 4px rgb(0 0 0 / 6%), 1px 4px 6px rgb(0 0 0 / 16%);
 
     transition: 
