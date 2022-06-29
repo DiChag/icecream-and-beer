@@ -33,17 +33,18 @@
 
 &__title {
     font-size: 34px;
-    margin-bottom: 8px;
+    margin-bottom: 148px;
 
     color: var(--red-text);  
 
     @include mq (tablet) {
         font-size: 48px;
-        margin-bottom: 20px;
+        margin-bottom: 158px;
     }
     
     @include mq (desctop) {
         font-size: 58px;
+        margin-bottom: 285px;
     }
 }
 
@@ -77,13 +78,14 @@
     position: relative;
     text-align: center;
     padding: 160px 40px 40px;
-    margin-top: 132px;
+    // margin-top: 132px;
     
     width: 280px;
     border-radius: 24px;
+   
     
     @include mq (tablet){
-        margin-top: 136px;
+        // margin-top: 136px;
         padding: 118px 32px 40px;
         width: 224px;
 
@@ -91,12 +93,18 @@
     }
 
     @include mq (desctop) {
-        margin-top: 252px;
+        // margin-top: 252px;
         padding: 165px 63px 60px;
         width: 368px;
 
         flex-basis: calc((100% - 30px) / 3);
     }
+}
+&__block:not(:last-child) {
+    @include mq (mobile-only) {
+        margin-bottom: 140px;
+    }
+
 }
 
 &__block:hover,
@@ -366,10 +374,10 @@
 
 .compound{
     position: absolute;
-    top: 203px;
-    
-    width: 242px;
+
     padding: 20px 10px;
+    width: 200px;
+    top: 195px;
 
     border-radius: 24px;
     border: 2px solid #fff;
@@ -378,6 +386,19 @@
     transition:
         opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
         visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include mq (tablet-only) {
+        top: 150px;
+        left: 22px;
+        padding: 25px 10px;
+        width: 180px;
+    }   
+
+    @include mq (desctop){
+        top: 203px;
+        width: 242px;
+       
+    }
 
 
 &--is-hidden {
@@ -419,6 +440,10 @@
     align-items: center;
     padding-left: 0;
     margin-block: 22px;
+    
+    @include mq (tablet) {
+        margin-block: 29px;
+    }
     }
 
 
