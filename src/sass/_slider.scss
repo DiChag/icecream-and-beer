@@ -35,9 +35,10 @@
     @include mq(tablet-only) {
         font-size: 14px;
             line-height: 31px;
-            width: 515px;
+            width: auto;
             text-align: center;
             letter-spacing: 0.04em;
+            margin: 0;
             background-image: repeating-linear-gradient(180deg, transparent, transparent 30px, #E1E1E1 31px);}
 @include mq(desctop) {
             width: 750px;
@@ -77,6 +78,8 @@
     }
         @include mq(tablet-only) {
         width: 620px;
+        padding-top: 37px;
+        padding-bottom: 36px;
         }
 }
 
