@@ -1120,7 +1120,7 @@ animation: bounce-in-right 1.7s both;
 
 .modal-wrapper {
     position: absolute;
-    top: 35%;
+    top: 40%;
     left: 50%;
     padding: 20px;
     transform: translate(-50%, -50%);
@@ -1131,7 +1131,7 @@ animation: bounce-in-right 1.7s both;
     border-radius: 18px;
 
     @include mq(tablet) {
-        top: 40%;
+        top: 50%;
          width: 350px;
         }
 
