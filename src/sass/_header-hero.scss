@@ -326,11 +326,13 @@
         animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         top: 43px;
         right: 185px;
+        width: 335px;
     }
 
         @include mq(desctop) {
             top: 54px;
             right: 149px;
+            width: 534px;
         }
  }
 
@@ -342,11 +344,17 @@
     @include mq(tablet) {
         bottom: 0;
          right: 303px;
+
+
+         width: 143px;
     }
 
         @include mq(desctop) {
          bottom: 0;
          right: 328px;
+
+
+         width: 236px;
         }
 }
 
@@ -577,6 +585,7 @@ animation: bounce-in-right 1.7s both;
          @include mq(desctop) {
         bottom: 60px;
         left: 16px;
+        width: 213px;
         }
 }
 
@@ -596,6 +605,7 @@ animation: bounce-in-right 1.7s both;
     @include mq(desctop) {
         bottom: 0px;
         right: 16px;
+        width: 304px;
     }
 }
 
