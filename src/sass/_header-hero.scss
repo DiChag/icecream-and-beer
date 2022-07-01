@@ -315,15 +315,6 @@
 // ГЕРОЙ
 // =====================
 
-// .hero_background-circle {
-//     width: 346px;
-//     height: 344px;
-//     border-radius: 50%;
-//     background-color: #FFA5BA;
-//     margin-top: 28px;
-//     margin-left: 16px;
-// }
-
 
 .hero__cover-picture {
     position: absolute;
@@ -335,11 +326,13 @@
         animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         top: 43px;
         right: 185px;
+        width: 335px;
     }
 
         @include mq(desctop) {
             top: 54px;
             right: 149px;
+            width: 534px;
         }
  }
 
@@ -351,11 +344,17 @@
     @include mq(tablet) {
         bottom: 0;
          right: 303px;
+
+
+         width: 143px;
     }
 
         @include mq(desctop) {
          bottom: 0;
          right: 328px;
+
+
+         width: 236px;
         }
 }
 
@@ -410,36 +409,91 @@
         }
 }
 
-.hero__button-wrap {
+
+
+// .hero__button-wrap {
+//     position: absolute;
+//     top: 320px;
+//     left: 20px;
+
+//     @include mq(tablet) {
+//             top: 202px;
+//             left: 32px;
+//         }
+
+//          @include mq(desctop) {
+//              top: 318px;
+//              left: 16px;
+//          }
+// }
+
+
+.hero__link-wrap {
+
+    display: flex;
     position: absolute;
     top: 320px;
     left: 20px;
 
     @include mq(tablet) {
-            top: 202px;
-            left: 32px;
-        }
+        top: 202px;
+        left: 32px;
+    }
 
-         @include mq(desctop) {
-             top: 318px;
-             left: 16px;
-         }
+    @include mq(desctop) {
+        top: 318px;
+        left: 16px;
+    }
 }
 
-.hero__button {
+// .hero__button {
+//     height: 24px;
+//     border-radius: 20px;
+    
+//     text-align: center;
+//     border: transparent;
+//     transform: scale(1);
+//     transition: transform 200ms linear;
+
+//     &:hover,
+//     &:hover {
+//         transform: scale(1.2);
+//     }
+
+
+//     @include mq(desctop) {
+//         height: 40px;
+//         font-size: 14px;
+//         line-height: 1.29;
+//         text-align: center;
+//     }
+// }
+
+.hero__link {
+    display: flex;
     height: 24px;
     border-radius: 20px;
-    
+
     text-align: center;
-    border: transparent;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.2;
     transform: scale(1);
     transition: transform 200ms linear;
 
     &:hover,
     &:hover {
-        transform: scale(1.2);
+        transform: scale(1.15);
     }
 
+        @include mq(desctop) {
+    
+            font-size: 14px;
+            line-height: 1.29;
+        }
 
     @include mq(desctop) {
         height: 40px;
@@ -449,48 +503,69 @@
     }
 }
 
-.hero__button-prod {
-    min-width: 62px;
-    background-color: #D41443;
-    margin-right: 8px;
 
-    @include mq(desctop) {
-            min-width: 107px;
-            margin-right: 12px;
-        }
-}
 
-.hero__button-how {
-    min-width: 62px;
-    background-color: #FFFFFF;
-    
-    @include mq(desctop) {
-            min-width: 138px;
-        }
-}
+// .hero__button-prod {
+//     min-width: 62px;
+//     background-color: #D41443;
+//     margin-right: 8px;
 
-.hero-link {
-    display: flex;
-        justify-content: center;
-    font-weight: 400;
-        font-size: 8px;
-        line-height: 1.25;
-
-    @include mq(desctop) {
-
-        font-size: 14px;
-        line-height: 1.29;
-        }
-}
+//     @include mq(desctop) {
+//             min-width: 107px;
+//             margin-right: 12px;
+//         }
+// }
 
 .hero__link-prod {
-        color: #FFFFFF;
+    min-width: 62px;
+    background-color: #D41443;
+    margin-right: 12px;
+
+    @include mq(desctop) {
+        min-width: 107px;
+        margin-right: 12px; 
+    }
+    color: #FFFFFF;
 }
 
+
+// .hero__button-how {
+//     min-width: 62px;
+//     background-color: #FFFFFF;
+    
+//     @include mq(desctop) {
+//             min-width: 138px;
+//         }
+// }
 
 .hero__link-how {
+    min-width: 83px;
+    background-color: #FFFFFF;
     color: #D41443;
+
+    @include mq(desctop) {
+        min-width: 138px;
+    }
 }
+
+// .hero-link {
+//     display: flex;
+//         justify-content: center;
+//     font-weight: 400;
+//         font-size: 8px;
+//         line-height: 1.25;
+
+//     @include mq(desctop) {
+
+//         font-size: 14px;
+//         line-height: 1.29;
+//         }
+// }
+
+
+// .hero__link-how {
+//     color: #D41443;
+// }
 
 
 
@@ -510,6 +585,7 @@ animation: bounce-in-right 1.7s both;
          @include mq(desctop) {
         bottom: 60px;
         left: 16px;
+        width: 213px;
         }
 }
 
@@ -529,6 +605,7 @@ animation: bounce-in-right 1.7s both;
     @include mq(desctop) {
         bottom: 0px;
         right: 16px;
+        width: 304px;
     }
 }
 
