@@ -6,4 +6,5 @@ import './js/map-close-open';
 import './js/menu';
 import './js/modal';
 import './js/modal-inside';
+import './js/modal-inside';
 import './js/about';
