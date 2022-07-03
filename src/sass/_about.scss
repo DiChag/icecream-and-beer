@@ -20,7 +20,7 @@
     background-size: contain;
   }
 
-  @include mq(desktop) {
+  @include mq(desctop) {
     background-image: url(../images/about/milk/milk-desk.png); /*  z-index: 1; */
     @include mq(retina) {
       background-image: url(../images/about/milk/milk-desk.@2x.png); /* z-index: 1; */
@@ -29,7 +29,7 @@
     height: auto;
     background-size: 1200px 521px;
     background-repeat: no-repeat;
-    background-position: 70% 70%;
+    background-position: top 70% left 70%;
     background-size: contain;
   }
 }
@@ -116,6 +116,7 @@
 }
 
 .about__text-all {
+  position: relative;
   text-align: left;
   @include mq(mobile) {
     margin-right: auto;
@@ -195,4 +196,27 @@
   margin-left: 10px;
   height: 12px;
   width: 12px;
+}
+
+.hiddenText {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  background: #fff;
+  top: 0;
+  right: 0;
+  height: 0;
+  transition: height 0.2s ease-in-out;
+  overflow: hidden;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.visible {
+  opacity: 1;
+  height: 85%;
+  border-radius: 0 0 15px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(var(--secondary-backgrounds), var(--pink-text));
 }
