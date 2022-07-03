@@ -58,7 +58,7 @@
     border: none;
     margin: 0;
     padding: 0;
-    z-index: 20;
+    z-index: 101;
 
 
 
@@ -154,6 +154,7 @@
     height: 502px;
     transform: translateX(100%);
     transition: transform 300ms linear;
+    z-index: 100;
 
 
     &.is-open {
@@ -296,18 +297,12 @@
     padding-bottom: 12px;
     display: block;
     transition: color 200ms linear;
-
 }
 
 .header__menu-link:hover,
 .header__menu-link:focus {
     color: #D41443
 }
-
-
-
-
-
 
 
 
@@ -1345,6 +1340,70 @@ transition: transform 250ms linear;
 
 
 
+
+
+
+// Скролл к хедеру
+
+.header__go-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    display: block;
+    width: 35px;
+    height: 35px;
+    z-index: 99;
+    cursor: pointer;
+    transform: rotate(0);
+    transition: transform 150ms linear;
+    // display: none;
+
+    @include mq(tablet) {
+            width: 40px;
+            height: 40px;
+        }
+
+
+    @include mq(desctop) {
+        width: 50px;
+        height: 50px;
+    }   
+}
+
+
+.header__go-to-top:hover,
+.header__go-to-top:focus {
+    filter: brightness(1.1);
+    outline: none;
+    transform: rotate(-45deg)
+}
+
+
+.header__go-to-top::after {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/header-hero/ice-cream-scroll.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include mq(tablet) {
+            width: 35px;
+            height: 35px;
+        }
+    
+
+    @include mq(desctop) {
+            width: 45px;
+            height: 45px;
+        }
+     
+}
 
 
 
