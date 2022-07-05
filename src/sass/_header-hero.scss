@@ -708,13 +708,14 @@ animation: bounce-in-right 1.7s both;
     position: absolute;
     bottom: 28px;
     transform: translateY(0);
-    transition: transform 200ms linear,
+    transition: transform 300ms linear,
     opacity 700ms linear;
     opacity: 0;
 
     &.is-open {
         opacity: 1;
         transform: translateY(-105%);
+        
     }
     
  }
